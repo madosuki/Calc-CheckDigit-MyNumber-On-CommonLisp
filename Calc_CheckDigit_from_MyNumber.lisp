@@ -11,8 +11,8 @@
         (l (list nil)))
     (dolist (s str)
       (push (parse-integer (string s)) l))
-    (if (= 12 (length str))
-        (print (calc-checkdigit (cdr (reverse (cdr l)))))
+    (if (/= 11 (length str))
+        (format t "Error. Valid only 11 digit.~%")
         (print (calc-checkdigit (cdr (reverse l)))))))
 
 (main)
