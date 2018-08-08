@@ -12,6 +12,8 @@
         (l (list nil)))
     (dolist (s str)
       (push (parse-integer (string s)) l))
-    (print (calc-checkdigit (cdr (reverse (cdr l)))))))
+    (if (= 12 (length str))
+        (print (calc-checkdigit (cdr (reverse (cdr l)))))
+        (print (calc-checkdigit (cdr (reverse l)))))))
 
 (main)
