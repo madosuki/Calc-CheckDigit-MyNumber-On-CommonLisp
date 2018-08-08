@@ -7,7 +7,6 @@
         (- 11 result))))
 
 (defun main ()
-  (format t "Input 'My Number'.~%")
   (let ((str (concatenate 'list (read-line)))
         (l (list nil)))
     (dolist (s str)
